@@ -1,0 +1,185 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{70E7456D-24BA-4363-B3FB-5830FA4B0A2B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LabSysCS</RootNamespace>
+    <AssemblyName>LabSysCS</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DataAccess\ConnectionManager.cs" />
+    <Compile Include="DataAccess\Patient.cs" />
+    <Compile Include="DataAccess\Report.cs" />
+    <Compile Include="DataAccess\User.cs" />
+    <Compile Include="GUI\Billing\InvoiceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Billing\InvoiceForm.Designer.cs">
+      <DependentUpon>InvoiceForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Billing\ViewInvoices.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Billing\ViewInvoices.Designer.cs">
+      <DependentUpon>ViewInvoices.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\LabPlus\TestResultArchiveForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\LabPlus\TestResultArchiveForm.Designer.cs">
+      <DependentUpon>TestResultArchiveForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\LabReports\FastingBloodSugarForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\LabReports\FastingBloodSugarForm.Designer.cs">
+      <DependentUpon>FastingBloodSugarForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\PatientManagement\AlertSendingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\PatientManagement\AlertSendingForm.Designer.cs">
+      <DependentUpon>AlertSendingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\PatientManagement\PatientInfoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\PatientManagement\PatientInfoForm.Designer.cs">
+      <DependentUpon>PatientInfoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\PatientManagement\PatientRegistrationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\PatientManagement\PatientRegistrationForm.Designer.cs">
+      <DependentUpon>PatientRegistrationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="GUI\Billing\InvoiceForm.resx">
+      <DependentUpon>InvoiceForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Billing\ViewInvoices.resx">
+      <DependentUpon>ViewInvoices.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\LabPlus\TestResultArchiveForm.resx">
+      <DependentUpon>TestResultArchiveForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\LabReports\FastingBloodSugarForm.resx">
+      <DependentUpon>FastingBloodSugarForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\PatientManagement\AlertSendingForm.resx">
+      <DependentUpon>AlertSendingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\PatientManagement\PatientInfoForm.resx">
+      <DependentUpon>PatientInfoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\PatientManagement\PatientRegistrationForm.resx">
+      <DependentUpon>PatientRegistrationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Apps-Email-Chat-Metro-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Drives-iPhone-Metro-icon.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\Apps-Yahoo-Messenger-alt-Metro-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\User With Frame.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Apps-Live-Messenger-alt-3-Metro-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Other-Power-Standby-Metro-icon.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
